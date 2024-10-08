@@ -1,0 +1,70 @@
+---
+import '@/styles/globals.css'
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Github, Linkedin, Twitter, Mail, Phone } from 'lucide-react';
+import ContactInfo from '../components/ContactInfo';
+---
+
+<Layout title="Contact John Doe - Senior Software Engineer">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-6">Get in Touch</h1>
+		<p class="text-xl text-muted-foreground mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<Card>
+				<CardHeader>
+					<CardTitle>Direct Contact</CardTitle>
+					<CardDescription>Click to reveal contact information.</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<div class="space-y-4">
+						<ContactInfo type="email" value="john.doe@example.com" client:load />
+						<ContactInfo type="phone" value="+1 (555) 123-4567" client:load />
+					</div>
+				</CardContent>
+			</Card>
+
+			<Card>
+				<CardHeader>
+					<CardTitle>Connect Online</CardTitle>
+					<CardDescription>Find me on social media and professional networks.</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<div class="flex flex-col space-y-4">
+						<a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-foreground hover:text-primary">
+							<Github className="w-5 h-5" />
+							<span>GitHub</span>
+						</a>
+						<a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-foreground hover:text-primary">
+							<Linkedin className="w-5 h-5" />
+							<span>LinkedIn</span>
+						</a>
+						<a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-foreground hover:text-primary">
+							<Twitter className="w-5 h-5" />
+							<span>Twitter</span>
+						</a>
+					</div>
+				</CardContent>
+			</Card>
+		</div>
+
+		<Card class="mt-8">
+			<CardHeader>
+				<CardTitle>Let's Collaborate</CardTitle>
+				<CardDescription>I'm always excited to work on new and challenging projects.</CardDescription>
+			</CardHeader>
+			<CardContent>
+				<p class="mb-4">Whether you have a project in mind, a job opportunity, or just want to connect, I'd love to hear from you. Don't hesitate to reach out through any of the channels above.</p>
+				<ContactInfo type="email" value="john.doe@example.com" buttonText="Send an Email" client:load />
+			</CardContent>
+		</Card>
+
+		<div class="text-center mt-8">
+			<Button variant="outline" size="lg" asChild>
+				<a href="/">Back to Home</a>
+			</Button>
+		</div>
+	</main>
+</Layout>

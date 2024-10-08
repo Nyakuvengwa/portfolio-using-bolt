@@ -1,0 +1,119 @@
+---
+import '@/styles/globals.css'
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Code2, Briefcase, GraduationCap, Award, Users } from 'lucide-react';
+---
+
+<Layout title="About John Doe - Senior Software Engineer">
+	<main class="container mx-auto px-4 py-8">
+		<h1 class="text-4xl font-bold mb-6">About John Doe</h1>
+		<p class="text-xl text-muted-foreground mb-8">Passionate Senior Software Engineer with 10+ years of experience in crafting elegant solutions for complex problems.</p>
+
+		<div class="space-y-8">
+			<Card>
+				<CardHeader>
+					<CardTitle>Professional Journey</CardTitle>
+					<CardDescription>My path in the world of software engineering</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-4">
+						<li>
+							<strong>Senior Software Engineer at TechCorp (2018 - Present)</strong>
+							<p>Lead developer for enterprise-scale cloud applications, mentoring junior developers, and driving technical decisions.</p>
+						</li>
+						<li>
+							<strong>Software Engineer at InnoSoft (2014 - 2018)</strong>
+							<p>Focused on full-stack web development, improving application performance, and implementing CI/CD pipelines.</p>
+						</li>
+						<li>
+							<strong>Junior Developer at StartUp Inc. (2011 - 2014)</strong>
+							<p>Contributed to various projects, gaining experience in agile methodologies and test-driven development.</p>
+						</li>
+					</ul>
+				</CardContent>
+			</Card>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<Card>
+					<CardHeader>
+						<CardTitle>Technical Skills</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<ul class="space-y-2">
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Languages</Badge> JavaScript, TypeScript, Python, Go</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Frontend</Badge> React, Vue.js, Angular, HTML5, CSS3</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Backend</Badge> Node.js, Django, Flask, Express</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Databases</Badge> PostgreSQL, MongoDB, Redis, Elasticsearch</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Cloud</Badge> AWS, Google Cloud, Azure, Docker, Kubernetes</li>
+							<li><Badge variant="outline"><Code2 className="w-4 h-4 mr-1" />Tools</Badge> Git, JIRA, Jenkins, Terraform, Prometheus</li>
+						</ul>
+					</CardContent>
+				</Card>
+				<Card>
+					<CardHeader>
+						<CardTitle>Soft Skills</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<ul class="space-y-2">
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Leadership</Badge> Team management, mentoring</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Communication</Badge> Technical writing, presentations</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Problem-solving</Badge> Analytical thinking, debugging</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Collaboration</Badge> Cross-functional teamwork</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Adaptability</Badge> Quick learner, embraces change</li>
+							<li><Badge variant="outline"><Users className="w-4 h-4 mr-1" />Time Management</Badge> Prioritization, meeting deadlines</li>
+						</ul>
+					</CardContent>
+				</Card>
+			</div>
+
+			<Card>
+				<CardHeader>
+					<CardTitle>Notable Projects</CardTitle>
+					<CardDescription>Highlights from my professional portfolio</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-4">
+						<li>
+							<strong>E-commerce Platform Overhaul</strong>
+							<p>Led a team of 5 developers to redesign and optimize a high-traffic e-commerce platform, resulting in a 200% performance improvement and 35% increase in conversion rates.</p>
+						</li>
+						<li>
+							<strong>AI-Powered Chatbot</strong>
+							<p>Developed a machine learning-based customer support chatbot that reduced support ticket volume by 40% and improved customer satisfaction scores by 25%.</p>
+						</li>
+						<li>
+							<strong>Microservices Architecture Migration</strong>
+							<p>Spearheaded the migration of a monolithic application to a microservices architecture, improving scalability and reducing deployment times by 70%.</p>
+						</li>
+					</ul>
+				</CardContent>
+			</Card>
+
+			<Card>
+				<CardHeader>
+					<CardTitle>Achievements and Certifications</CardTitle>
+					<CardDescription>Recognition of expertise and contributions</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-2">
+						<li><Badge variant="outline"><Award className="w-4 h-4 mr-1" />Award</Badge> "Innovator of the Year" at TechCorp (2021)</li>
+						<li><Badge variant="outline"><Award className="w-4 h-4 mr-1" />Patent</Badge> Co-inventor on two software patents for distributed systems optimization</li>
+						<li><Badge variant="outline"><GraduationCap className="w-4 h-4 mr-1" />Certification</Badge> AWS Certified Solutions Architect - Professional</li>
+						<li><Badge variant="outline"><GraduationCap className="w-4 h-4 mr-1" />Certification</Badge> Google Cloud Professional Data Engineer</li>
+						<li><Badge variant="outline"><GraduationCap className="w-4 h-4 mr-1" />Certification</Badge> Certified Kubernetes Administrator (CKA)</li>
+						<li><Badge variant="outline"><Briefcase className="w-4 h-4 mr-1" />Speaker</Badge> Regular speaker at tech conferences on cloud architecture and DevOps practices</li>
+					</ul>
+				</CardContent>
+			</Card>
+		</div>
+
+		<div class="text-center mt-8">
+			<Button size="lg" asChild>
+				<a href="/">Back to Home</a>
+			</Button>
+		</div>
+	</main>
+</Layout>

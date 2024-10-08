@@ -1,0 +1,63 @@
+---
+import '@/styles/globals.css'
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Code2, Briefcase, GraduationCap } from 'lucide-react';
+---
+
+<Layout title="John Doe - Senior Software Engineer">
+	<main class="container mx-auto px-4 py-8">
+		<div class="flex flex-col items-center mb-12">
+			<h1 class="text-4xl font-bold mb-2">John Doe</h1>
+			<p class="text-2xl text-muted-foreground mb-4">Crafting Elegant Solutions for Complex Problems</p>
+			<div class="flex space-x-2 mb-6">
+				<Badge variant="secondary"><Code2 className="w-4 h-4 mr-1" /> Full Stack</Badge>
+				<Badge variant="secondary"><Briefcase className="w-4 h-4 mr-1" /> 10+ Years</Badge>
+				<Badge variant="secondary"><GraduationCap className="w-4 h-4 mr-1" /> MSc Computer Science</Badge>
+			</div>
+			<div class="flex space-x-4">
+				<Button size="lg" asChild>
+					<a href="/about">About Me</a>
+				</Button>
+				<Button size="lg" variant="outline" asChild>
+					<a href="/contact">Contact</a>
+				</Button>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<Card>
+				<CardHeader>
+					<CardTitle>Expertise</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<ul class="list-disc list-inside">
+						<li>Full-stack web development</li>
+						<li>Cloud architecture and DevOps</li>
+						<li>Machine learning and AI integration</li>
+						<li>Scalable and distributed systems</li>
+					</ul>
+				</CardContent>
+			</Card>
+			<Card>
+				<CardHeader>
+					<CardTitle>Recent Projects</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<ul class="space-y-2">
+						<li>
+							<strong>E-commerce Platform Overhaul</strong>
+							<p class="text-sm text-muted-foreground">Improved performance by 200% and increased conversion rates</p>
+						</li>
+						<li>
+							<strong>AI-Powered Chatbot</strong>
+							<p class="text-sm text-muted-foreground">Reduced customer support workload by 40%</p>
+						</li>
+					</ul>
+				</CardContent>
+			</Card>
+		</div>
+	</main>
+</Layout>
